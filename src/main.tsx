@@ -1,7 +1,7 @@
 // src/main.tsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css'; // Fichier de styles
+import './styles/main.scss';
 import App from './App'; // Importation de ton composant principal
 
 // Création du point d'entrée React et rendu de l'application
