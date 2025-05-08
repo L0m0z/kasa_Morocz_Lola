@@ -1,0 +1,29 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 40px;
+  
+    .banner {
+      margin-bottom: 40px;
+    }
+  
+    .about-collapse {
+      width: 100%;
+      max-width: 1024px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 41px;
+      padding-right: 41px;
+    }
+  
+    @media (max-width: 767px) {
+      .about-collapse {
+        gap: 5px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  

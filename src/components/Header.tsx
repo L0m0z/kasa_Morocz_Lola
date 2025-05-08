@@ -1,21 +1,33 @@
-// src/components/Header.tsx
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
 import logo from '../assets/images/LOGO (1).png'
-import '../styles/layout/header.scss'
+import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
+export default function Header() {
+  const location = useLocation();
+
   return (
-    <header className="header">
-      <Link to="/">
-        <img src={logo} alt="Kasa" className="header__logo" />
-      </Link>
-      <nav className="header__nav">
-        <Link to="/" className="header__link">Accueil</Link>
-        <Link to="/a-propos" className="header__link">À propos</Link>
+    <header>
+      <nav>
+        <img src={logo} alt="Logo" />
+        <ul>
+          <li>
+            <Link
+              to={"/"}
+              className={location.pathname === "/" ? "active" : ""}
+            >
+              Accueil
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/a-propos"}
+              className={location.pathname === "/a-propos" ? "active" : ""}
+            >
+              A Propos
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
-  )
+  );
 }
-
-export default Header

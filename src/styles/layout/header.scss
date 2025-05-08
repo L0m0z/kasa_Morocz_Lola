@@ -1,17 +1,40 @@
-// src/styles/layout/header.scss
-.header {
-    background-color: red;
-    padding: 20px;
-  }
+ nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0 50px 0;
+    & ul {
+        display: flex;
+        gap: 57px;
+        list-style: none;
+        font-size: 24px;
+        & a {
+            text-decoration: none;
+            color: black;
+            &.active {
+            border-bottom: 1px solid black;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    nav {
+        padding: 20px 0 0 0;
+        & img {
+            min-width: 145px;
+            height: 47px;
+        }
+        & ul {
+            font-size: 12px;
+            gap: 0;
+            & li {
+                padding-left: 10px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
   
-  .header__logo {
-    width: 100px;
-  }
-  
-  .header__link {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
+   
   

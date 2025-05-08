@@ -1,0 +1,14 @@
+@use '../base/variables' as *;
+
+
+footer {
+    background-color: $footer-bg;
+    color: $footer-text;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+  
+    p {
+        margin-top: 20px;
+    }
+  }
