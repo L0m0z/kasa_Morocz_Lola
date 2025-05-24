@@ -1,18 +1,18 @@
 import React from "react";
-import logo from '../assets/images/LOGO (1).png'
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/images/LOGO (1).png"; // 👈 usage propre de l'alias
 
-export default function Header() {
+const Header: React.FC = () => {
   const location = useLocation();
 
   return (
-    <header>
-      <nav>
-        <img src={logo} alt="Logo" />
-        <ul>
+    <header className="header">
+      <nav className="nav">
+        <img src={logo} alt="Logo de Kasa" className="logo" />
+        <ul className="nav-links">
           <li>
             <Link
-              to={"/"}
+              to="/"
               className={location.pathname === "/" ? "active" : ""}
             >
               Accueil
@@ -20,7 +20,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              to={"/a-propos"}
+              to="/a-propos"
               className={location.pathname === "/a-propos" ? "active" : ""}
             >
               A Propos
@@ -30,4 +30,7 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
+
